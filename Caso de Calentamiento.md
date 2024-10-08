@@ -1,0 +1,9 @@
+
+
+``` SQL
+
+
+COMMIT; -- En BancoB
+
+
+```
