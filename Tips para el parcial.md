@@ -1,0 +1,3 @@
+- La discusión debe estar respaldada por una argumentación sólida. Según el profesor, este es uno de los aspectos a los que dará mayor importancia.
+- Debemos responder a la siguiente pregunta: ¿Cómo podemos mejorar la estrategia que no fue elegida después de la discusión?
+- No debemos usar PL/SQL porque usarlo no nos permitiría observar los estados de la base de datos entre las operaciones de la transacción.

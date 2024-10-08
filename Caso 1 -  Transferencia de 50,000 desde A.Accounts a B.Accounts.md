@@ -15,7 +15,10 @@ UPDATE B.Accounts SET balance = balance + 50000 WHERE code = 2;
 ### 1.3. Restar el dinero de la cuenta de origen (`A.Accounts`):
 
 ```sql
-UPDATE A.Accounts SET balance = balance - 50000 WHERE code = 1;
+UPDATE A.Accounts 
+SET balance = balance - 50000 
+WHERE code = 1 
+AND balance >= 50000;
 ```
 
 ### 1.4. Comprometer la transacción `Ti`
@@ -38,7 +41,7 @@ SELECT * FROM B.Accounts;
 
 ## 2. Restaurar los valores originales de la tabla de cuentas
 
-Para restaurar los valores originales de la tabla `Cuentas`, se realiza una serie de `UPDATE` que reinicien el saldo a los valores iniciales Y por último, se hace `COMMIT`:
+Para restaurar los valores originales de la tabla `Accounts`, se realiza una serie de `UPDATE` que reinicien el saldo a los valores iniciales Y por último, se hace `COMMIT`:
 
 ```sql
 -- Restaurar valores en Banco A
@@ -63,7 +66,10 @@ Si el saldo es suficiente (>= 50,000), continuar con la transferencia.
 ### 3.2. Restar el dinero de la cuenta de origen (`A.Accounts`):
 
 ```sql
-UPDATE A.Accounts SET balance = balance - 50000 WHERE code = 1;
+UPDATE A.Accounts 
+SET balance = balance - 50000 
+WHERE code = 1 
+AND balance >= 50000;
 ```
 
 ### 3.3. Sumar el dinero a la cuenta destino (`B.Accounts`):
